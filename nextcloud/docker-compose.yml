@@ -1,0 +1,10 @@
+services:
+  nextcloud:
+    image: nextcloud:latest
+    ports:
+      - 8081:80
+    volumes:
+      - ./data:/var/www/html/data:z
+      - ./config:/var/www/html/config:z
+      - ./apps:/var/www/html/custom_apps:z
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  forgejo:
+    image: codeberg.org/forgejo/forgejo:14
+    ports:
+      - 3001:3001
+      - 222:22
+    volumes:
+      - ./data:/data:z
+    restart: unless-stopped

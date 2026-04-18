@@ -1,0 +1,37 @@
+# Media
+*.mp3
+*.mp4
+*.flac
+*.m4a
+*.m4b
+*.aac
+*.ogg
+*.opus
+*.wav
+*.aiff
+*.epub
+*.mobi
+*.azw3
+*.cbr
+*.cbz
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.raw
+*.cr2
+.DS_STORE
+audiobooks/
+ebooks/
+music/
+
+# Secrets
+.env
+
+# Docker volumes data
+**/data/
+**/work_dir/
+**/config/
+**/metadata/
