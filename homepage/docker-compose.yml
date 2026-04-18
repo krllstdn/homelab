@@ -11,4 +11,3 @@ services:
     restart: unless-stopped
     environment:
       - HOMEPAGE_ALLOWED_HOSTS=100.114.98.51:3000
-      - PORTAINER_TOKEN=${PORTAINER_TOKEN}

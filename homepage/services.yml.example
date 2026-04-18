@@ -1,0 +1,40 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+# don't forget to provide your Tailscale IP instead of the placeholder IP and your Portainer token
+# Unfortunately, it is impossible to set variable for IP here
+
+- Misc:
+    - AdGuard Home:
+        href: http://YOUR_TAILSCALE_IP:3002
+        icon: adguard-home.png
+        ping: http://YOUR_TAILSCALE_IP:3002
+- Media:
+    - Audiobookshelf:
+        href: http://YOUR_TAILSCALE_IP:13378
+        icon: audiobookshelf.png
+        ping: http://YOUR_TAILSCALE_IP:13378
+    - Navidrome:
+        href: http://YOUR_TAILSCALE_IP:4533
+        icon: navidrome.png
+        ping: http://YOUR_TAILSCALE_IP:4533
+    - Nextcloud:
+        href: http://YOUR_TAILSCALE_IP:8081
+        icon: nextcloud.png
+        ping: http://YOUR_TAILSCALE_IP:8081
+
+- Dev:
+    - Portainer:
+        href: http://YOUR_TAILSCALE_IP:9000
+        icon: portainer.png
+        ping: http://YOUR_TAILSCALE_IP:9000
+        widget:
+          type: portainer
+          url: http://YOUR_TAILSCALE_IP:9000
+          env: 3
+          key: YOUR_PORTAINER_TOKEN
+    - Forgejo:
+        href: http://YOUR_TAILSCALE_IP:3001
+        icon: gitea.png
+        ping: http://YOUR_TAILSCALE_IP:3001
