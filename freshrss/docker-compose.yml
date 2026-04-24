@@ -1,0 +1,8 @@
+services:
+  freshrss:
+    image: freshrss/freshrss:latest
+    ports:
+      - 8082:80
+    volumes:
+      - ./data:/var/www/FreshRSS/data:z
+    restart: unless-stopped
