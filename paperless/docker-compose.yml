@@ -1,0 +1,21 @@
+services:
+  broker:
+    image: redis:7
+    restart: unless-stopped
+
+  paperless:
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    ports:
+      - 8083:8000
+    volumes:
+      - ./data:/usr/src/paperless/data:z
+      - ./media:/usr/src/paperless/media:z
+      - ./export:/usr/src/paperless/export:z
+      - ./consume:/usr/src/paperless/consume:z
+    environment:
+      - PAPERLESS_REDIS=redis://broker:6379
+      - PAPERLESS_OCR_LANGUAGE=ces+eng
+      - PAPERLESS_SECRET_KEY=.9f*I51gUjOAnA5n%FU|oZahp^bCAzz3
+    depends_on:
+      - broker
+    restart: unless-stopped
